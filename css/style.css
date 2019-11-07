@@ -1,0 +1,877 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bellefair|Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ultra&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Gruppo&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Gruppo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Gruppo|Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Economica|Gruppo|Rajdhani&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Economica|Gruppo|Open+Sans|Rajdhani&display=swap');
+
+
+@font-face {
+    font-family: "De valencia";
+    src: url("../fonts/De-Valencia.ttf");
+    src:
+        url("../fonts/De-Valencia.ttf") format("woff"),
+        url("../fonts/De-Valencia.ttf") format("opentype"),
+        url("../fonts/De-Valencia.ttf") format("svg");
+}
+
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("../fonts/HelveticaNeueLTStd-BlkCnO.ttf");
+    src:
+}
+
+
+@font-face {
+    font-family: "gt-sectra";
+    src: url("../fonts/GT Sectra Book.ttf");
+    src:
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dbd5c9;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/*header*/
+
+
+header {
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    background-color: transparent;
+    position: absolute;
+    animation: header 1.5s ease-out normal 1.8s;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.main-nav label,
+#hamburger {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    align-items: center;
+    width: 32em;
+    margin: 0;
+    background-color: transparent;
+}
+
+.main-nav ul li {
+    padding: 1em 4em;
+}
+
+.main-nav a {
+    text-decoration: none;
+
+}
+
+.main-nav ul li:hover {
+    text-decoration: none;
+    animation: bellshake .5s cubic-bezier(.36, .07, .19, .97) both;
+    backface-visibility: hidden;
+    transform-origin: top right;
+}
+
+.main-nav ul a {
+    color: black;
+    opacity: 0.7;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    display: flex;
+    background-color: transparent;
+    color: black;
+    opacity: 0.7;
+    font-size: 1.2em;
+    padding: 1.5em 4em;
+
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.logo p:nth-child(2) {
+    font-family: 'Damion', cursive;
+    padding-top: 0.4em;
+    font-size: 1.2em;
+}
+
+
+
+div.ball {
+    background-color: #ffff8e;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    mix-blend-mode: exclusion;
+    animation: heartbeat 5s infinite;
+}
+
+
+/*
+intro loading screen
+code genomen en geadapteerd van: https://codepen.io/studiotwist/pen/KmoOJw
+*/
+@keyframes bellshake {
+    0% {
+        transform: rotate(0);
+    }
+
+    15% {
+        transform: rotate(5deg);
+    }
+
+    30% {
+        transform: rotate(-5deg);
+    }
+
+    45% {
+        transform: rotate(4deg);
+    }
+
+    60% {
+        transform: rotate(-4deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    85% {
+        transform: rotate(-2deg);
+    }
+
+    92% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+/*main pagina*/
+
+main > article {
+    display: grid;
+    grid-template-columns: repeat(40, 2vw);
+    grid-template-rows: repeat(20, 5vh);
+    grid-gap: 0px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+main > article div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.item-1,
+.item-2,
+    {
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.item-1 {
+    grid-column: 1 / span 41;
+    grid-row: 1/ span 11;
+    border-bottom: 1px solid #727272;
+    opacity: 0.5;
+}
+
+
+.item-4 {
+    grid-column: 26/ span 16;
+    grid-row: 1/ span 20;
+    border-left: 1px solid #727272;
+    opacity: 0.5;
+}
+
+.item-2 {
+    grid-column: 15/ span 22;
+    grid-row: 4/ span 14;
+    transition: transform 0.9s ease;
+    z-index: 100;
+    background-color: aqua;
+    margin: 0 auto;
+    overflow: hidden;
+    background-image: url("../assets/9f41135c79867a5bd95ad8c836b9e4d9.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+
+.item-3 {
+    grid-column: 15/ span 22;
+    grid-row: 4/ span 14;
+    transition: transform 0.9s ease;
+    z-index: 1;
+    background-color: aqua;
+    margin: 0 auto;
+    overflow: hidden;
+    background-image: url("../assets/9f41135c79867a5bd95ad8c836b9e4d9.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.t1 h1 {
+    font-family: "gt-sectra";
+    color: #ffff8e;
+    font-size: 7.7em;
+    letter-spacing: 5px;
+    font-weight: bold;
+    z-index: 100;
+}
+
+main > article > a {
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    background-color: transparent;
+    grid-column: 36/ span 6;
+    grid-row: 9/ span 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    animation: textin2 1s ease-out normal 1.5s;
+    transition: opacity 0.2s ease;
+}
+
+.t1 h3 {
+    color: black;
+    opacity: 0.7;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: "De valencia";
+    min-width: 100%;
+    min-width: 10em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.t2 h4 {
+    color: black;
+    opacity: 0.7;
+    font-size: 1.3em;
+    font-family: "De valencia";
+    letter-spacing: 1px;
+    transition: opacity 0.2s ease;
+}
+
+.t1 {
+    grid-column: 3/ span 13;
+    grid-row: 12/ span 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation: textin 1s ease-out normal 1.5s;
+    transition: opacity 0.2s ease;
+}
+
+.t2 {
+
+    margin-bottom: 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    grid-column: 37/ span 5;
+    grid-row: 16/ span 3;
+    animation: textin2 1s ease-out normal 1.5s;
+    transition: opacity 0.2s ease;
+    padding-right: 3.6em;
+}
+
+.loading-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    z-index: 100;
+    opacity: 1;
+    animation: jump 3s ease-out normal;
+    animation-fill-mode: forwards;
+}
+
+.loading-intro:before {
+    display: none;
+    opacity: 0;
+}
+
+
+.loading-intro img {
+    height: 7em;
+    animation: rotation 1s linear, fade 0.5 normal;
+
+}
+
+#trigger1:target .item-2 {
+    top: 0;
+    transform: translateX(-64%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#trigger1:target .t1 {
+    opacity: 0;
+}
+
+#trigger1:target .t2 {
+    opacity: 0;
+}
+
+#trigger1:target #shop {
+    opacity: 0;
+
+}
+
+/*contact*/
+/*
+
+code genomen en geadapteerd van: https://www.darkcode.info/2019/10/responsive-contact-section-using-html.html
+*/
+
+
+.contact {
+    grid-column: 28/ span 14;
+    grid-row: 5/ span 10;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.2s ease;
+    text-align: left;
+}
+
+form {
+    transition: all .5s;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid;
+    border-color: black;
+    color: black;
+    opacity: 0.7;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
+    font-size: 1em;
+    margin-bottom: 4em;
+    margin-right: 3em;
+    transition: all 2s;
+}
+
+input:valid {
+    border-color: white;
+    opacity: 0.7;
+}
+
+input:focus {
+    color: white;
+    opacity: 0.7;
+}
+
+form > legend {
+    font-size: 2em;
+    color: black;
+    opacity: 0.7;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif
+}
+
+form > label {
+    display: none;
+}
+
+input:nth-child(7) {
+    width: 20em;
+
+}
+
+
+textarea {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid black;
+    color: black;
+    opacity: 0.7;
+    width: 1em;
+    font-size: 1.3em;
+    margin-bottom: 4em;
+    margin-right: 3em;
+    min-width: 70%;
+    max-width: 70%%;
+    transition: all 2s;
+}
+
+textarea:valid {
+    border-color: white;
+    opacity: 0.7;
+}
+
+textarea:focus {
+    color: black;
+    opacity: 0.7;
+}
+
+::placeholder {
+    color: black;
+    opacity: 0.7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+textarea::placeholder {
+    font-size: 1em;
+}
+
+
+.contact button {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 40px;
+    transition: all .2s 1s;
+    opacity: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.2s linear;
+    cursor: pointer;
+
+}
+
+form:valid button {
+    opacity: 1
+}
+
+.contact button:hover {
+    background: #ffff8e;
+    color: #011c40;
+    border: 0px solid white;
+}
+
+
+#trigger1:target .contact {
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.5s;
+
+}
+
+#trigger1:target .item-1 {
+    display: none;
+
+}
+
+
+.img-overlay {
+    grid-column: 16/ span 20;
+    grid-row: 1/ span 20;
+    background-color: transparent;
+}
+
+/*img animation : code genomen van: https://tympanus.net/TipsTricks/FastHoverSlideshow/*/
+.item-2 img {
+    width: 100%;
+    object-fit: cover;
+    visibility: hidden;
+    animation: showMe 0.6s linear infinite 0s forwards;
+    animation-play-state: paused;
+    animation: none;
+    transition: ease-in;
+}
+
+@-webkit-keyframes none {}
+
+.item-2:hover img {
+    animation: showMe 0.7s linear infinite 1s forwards;
+    animation-play-state: running;
+
+}
+
+.item-2:hover img:nth-child(1) {
+    animation-delay: 0.1s;
+
+}
+
+.item-2:hover img:nth-child(2) {
+    animation-delay: 0.3s;
+
+}
+
+
+@-webkit-keyframes showMe {
+    0% {
+        visibility: visible;
+        z-index: 100;
+    }
+
+    12.5% {
+        visibility: visible;
+        z-index: 100;
+    }
+
+    25% {
+        visibility: visible;
+        z-index: 0;
+    }
+
+    37.5% {
+        visibility: visible;
+        z-index: 0;
+    }
+
+    50% {
+        visibility: hidden;
+        z-index: 0;
+    }
+}
+
+
+/*aniamtions*/
+
+
+@keyframes jump {
+    0% {
+        display: flex;
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+
+
+    80% {
+        opacity: 1;
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes textin {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+
+    50% {
+        transform: translateX(-90%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+}
+
+@keyframes textin2 {
+    0% {
+        opacity: 0;
+        transform: translateX(200%)
+    }
+
+    50% {
+        transform: translateX(180%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+}
+
+@keyframes header {
+    0% {
+        opacity: 0;
+        transform: translateY(-200%)
+    }
+
+    50% {
+        transform: translateY(10%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        opacity: 1;
+        transform: rotate(359deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes processbar-wordpress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+
+/*ipad and mobile version*/
+
+@media screen and (max-width: 980px) {
+    /*header*/
+
+    header {
+        top: 0;
+        left: 0;
+        z-index: 100;
+        margin-top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .main-nav {
+        justify-content: space-between;
+        background-color: transparent;
+        overflow-x: hidden;
+
+    }
+
+    .main-nav label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        opacity: 0.7;
+        font-style: normal;
+        font-size: 2em;
+        margin-right: 20px;
+    }
+
+    .main-nav ul li {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1em;
+        color: white;
+        width: 100%;
+        padding: 2em
+    }
+
+    .main-nav ul a {
+        color: white;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+
+    .main-nav ul {
+        display: none;
+        width: 100%;
+        min-height: 85vh;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        padding-top: 15vh;
+        color: white;
+    }
+
+    .main-nav input:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: white;
+    }
+
+    .main-nav input:checked ~ header {
+        height: 100vh;
+    }
+
+    .menu {
+        background-color: black;
+        justify-content: center;
+
+    }
+
+    .logo {
+        padding: 4vw 8vw;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    .logo p:nth-child(2) {
+        font-size: 1em;
+    }
+
+    .item-2 {
+        grid-column: 5/ span 35;
+        grid-row: 9/ span 12;
+        position: relative;
+        z-index: 0;
+    }
+
+    .item-4 {
+        display: none;
+    }
+
+    .item-1 {
+        display: none;
+    }
+
+    .titels {
+        grid-template-columns: repeat(0, 2fr);
+        grid-template-rows: repeat(20, 5vh);
+    }
+
+    .t1 h1 {
+        font-size: 3em;
+        letter-spacing: 5px;
+    }
+
+    .t1 h3 {
+        font-size: 170%;
+    }
+
+    .t2 h4 {
+        width: 6em;
+        text-align: right;
+    }
+
+    .t1 {
+        grid-column: 5/ span 29;
+        grid-row: 5/ span 3;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .t2 {
+        grid-column: 30/ span 13;
+        grid-row: 17/ span 3;
+        z-index: 1;
+    }
+
+    main > article > a {
+        font-size: 5.8vw;
+        grid-column: 30/ span 13;
+        grid-row: 9/ span 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 2px;
+        z-index: 1;
+    }
+
+    #trigger1:target .item-2 {
+        display: none;
+    }
+
+    #trigger1:target .item-4 {
+        display: none;
+    }
+
+    .contact {
+        grid-column: 5/ span 15;
+        grid-row: 5/ span 3;
+        width: 100vw;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        text-align: left;
+    }
+
+    form > legend {
+        font-size: 1.5em;
+
+    }
